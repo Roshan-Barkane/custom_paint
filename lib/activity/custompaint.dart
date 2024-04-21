@@ -24,8 +24,34 @@ class _Custom_PaintState extends State<Custom_Paint> {
       body: Center(
         child: Container(
           color: Colors.grey.shade300,
+          child: CustomPaint(
+            // this take a size colled convers size drow the all shapes
+            painter: MasterPainter(),
+            size: const Size(300, 400), // take convers size
+          ),
         ),
       ),
     );
+  }
+}
+
+// drow the line
+class MasterPainter extends CustomPainter {
+  /* CustomPainter is override two mathods paint and shouldRepaint
+   1. paint mathods- its take to parameter convas and size.
+   2. shouldRepaint-  */
+  @override
+  void paint(Canvas canvas, Size size) {
+    // TODO: implement paint
+    Paint paint = Paint();
+    paint.strokeWidth = 3;
+    paint.color = Colors.black;
+    canvas.drawLine(Offset.zero, Offset(size.width, 0), paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    // TODO: implement shouldRepaint
+    return false;
   }
 }
