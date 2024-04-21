@@ -11,8 +11,7 @@ class DrowRect extends CustomPainter {
     paint.style = PaintingStyle.stroke;
     //paint.style = PaintingStyle.fill;
     Offset center = Offset(size.width / 2, size.height / 2);
-    canvas.drawRect(
-        Rect.fromCenter(center: center, width: 200, height: 100), paint);
+    canvas.drawRect(Rect.fromCircle(center: center, radius: 50), paint);
   }
 
   @override
