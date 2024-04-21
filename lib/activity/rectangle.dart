@@ -10,11 +10,13 @@ class DrowRectangle extends CustomPainter {
     paint.color = Colors.black;
     paint.style = PaintingStyle.stroke;
     //paint.style = PaintingStyle.fill;
+    // fromRectAndCorners : topleft,topright,bottomleft,bottonright,
     Rect rect = const Rect.fromLTRB(10, 20, 200, 100);
     canvas.drawRRect(
-        RRect.fromRectAndRadius(
+        RRect.fromRectAndCorners(
           rect,
-          const Radius.circular(50),
+          topLeft: const Radius.circular(20),
+          topRight: const Radius.circular(70),
         ),
         paint);
   }
