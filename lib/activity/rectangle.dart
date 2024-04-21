@@ -11,6 +11,8 @@ class DrowRectangle extends CustomPainter {
     paint.style = PaintingStyle.stroke;
     //paint.style = PaintingStyle.fill;
     // fromRectAndCorners : topleft,topright,bottomleft,bottonright,
+    // fromRectXY : top-bottom,left-right
+
     Rect rect = const Rect.fromLTRB(10, 20, 200, 100);
     canvas.drawRRect(
         RRect.fromRectAndCorners(
