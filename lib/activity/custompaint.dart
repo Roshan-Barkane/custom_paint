@@ -1,4 +1,4 @@
-import 'package:custom_paint/activity/drowrect.dart';
+import 'package:custom_paint/activity/drowoval.dart';
 import 'package:flutter/material.dart';
 
 class Custom_Paint extends StatefulWidget {
@@ -27,7 +27,7 @@ class _Custom_PaintState extends State<Custom_Paint> {
           color: Colors.grey.shade300,
           child: CustomPaint(
             // this take a size colled convers size drow the all shapes
-            painter: DrowRect(),
+            painter: DrowOval(),
             size: const Size(300, 400), // take convers size
           ),
         ),
